@@ -9,7 +9,7 @@ var app = require('./app');
 /*===============================================
 Settings
 ===============================================*/
-app.set('port' , 3700);
+app.set('port' , process.env.PORT || 3000);
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/serigrafiasur')
