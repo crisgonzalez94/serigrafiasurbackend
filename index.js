@@ -10,12 +10,10 @@ var app = require('./app');
 Settings
 ===============================================*/
 //Comentar en produccion
-app.set('port' , 3700);
-
-const port = process.env.PORT || 3000;
+//app.set('port' , 3700);
 
 //Descomentar en produccion
-//app.set('port' , process.env.PORT || 3000);
+app.set('port' , process.env.PORT || 3000);
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/serigrafiasur')
